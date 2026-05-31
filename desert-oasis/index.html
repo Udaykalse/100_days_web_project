@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Desert Oasis — Nature's Tranquility</title>
+  </head>
+  <body>
+    <div class="grain"></div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <span class="logo-symbol">◈</span>
+          <span>Desert Oasis</span>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="#explore">Explore</a>
+          <a href="#retreats">Retreats</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact" class="nav-cta">Book Stay</a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <main>
+        <section class="primary-content" id="explore" style="--theme: dark">
+          <div class="hero-eyebrow">
+            <span class="dot"></span>
+            <span>Est. 1987 · Sahara Region</span>
+          </div>
+          <h1 class="reveal-text">
+            Desert Oasis:<br />
+            <em>Exploring Nature's</em><br />
+            Tranquility
+          </h1>
+          <div class="hero-body">
+            <p>
+              Amid the vast stillness of the desert, where silence holds its
+              breath and the horizon stretches beyond measure, lies a sanctuary
+              unlike any other — sculpted by time, preserved by wonder.
+            </p>
+            <p>
+              Every grain of sand carries a story. Every breeze carries the
+              ancient perfume of centuries. We invite you to step beyond the
+              ordinary, into a world where the land itself becomes your guide.
+            </p>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num" data-target="14">0</span
+              ><span class="stat-unit">k+</span>
+              <p>Acres of Wilderness</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="36">0</span
+              ><span class="stat-unit"></span>
+              <p>Private Retreats</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="98">0</span
+              ><span class="stat-unit">%</span>
+              <p>Guest Satisfaction</p>
+            </div>
+          </div>
+
+          <article class="card featured-card" id="featured">
+            <div class="card-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1702927706292-c57d75cf2143?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+                alt="Tranquil Desert Haven"
+                loading="lazy"
+              />
+              <div class="card-badge">Featured</div>
+            </div>
+            <div class="card-body">
+              <h2>Tranquil Desert Haven</h2>
+              <p>
+                A sanctuary where sunbaked walls meet shaded courtyards — each
+                room an invitation to surrender to the rhythm of the desert.
+              </p>
+              <a href="#" class="card-link">
+                <span>Discover</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </section>
+
+        <aside class="cards" id="retreats">
+          <div class="aside-header">
+            <h3>Our Retreats</h3>
+            <div class="filter-row">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="luxury">Luxury</button>
+              <button class="filter-btn" data-filter="eco">Eco</button>
+            </div>
+          </div>
+
+          <article class="card" data-category="luxury">
+            <div class="card-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1704137477371-bed38523c2eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+                alt="Serenity Oasis Retreat"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Luxury</span>
+              <h2>Serenity Oasis Retreat</h2>
+              <p>
+                Where the desert sky meets understated grandeur. A retreat for
+                those who seek silence and space in equal measure.
+              </p>
+              <a href="#" class="card-link">
+                <span>Discover</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card" data-category="eco">
+            <div class="card-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1703783010857-9bd7a7b97c50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+                alt="Mirage Haven Cottage"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Eco</span>
+              <h2>Mirage Haven Cottage</h2>
+              <p>
+                Built from the earth itself — adobe walls, terracotta floors,
+                and a starlit terrace that makes the heavens feel within reach.
+              </p>
+              <a href="#" class="card-link">
+                <span>Discover</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="card" data-category="luxury">
+            <div class="card-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1704137477371-bed38523c2eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+                alt="Sand Dune Hideaway"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Luxury</span>
+              <h2>Sand Dune Hideaway</h2>
+              <p>
+                Perched at the edge of golden dunes, this private villa captures
+                sunsets that last long past dusk in memory.
+              </p>
+              <a href="#" class="card-link">
+                <span>Discover</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <div class="aside-cta">
+            <p>Ready for the silence?</p>
+            <a href="#contact" class="cta-btn">Plan Your Journey</a>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <section class="marquee-section">
+      <div class="marquee-track">
+        <span>Wilderness</span><span class="sep">◈</span> <span>Solitude</span
+        ><span class="sep">◈</span> <span>Heritage</span
+        ><span class="sep">◈</span> <span>Silence</span
+        ><span class="sep">◈</span> <span>Stars</span><span class="sep">◈</span>
+        <span>Wilderness</span><span class="sep">◈</span> <span>Solitude</span
+        ><span class="sep">◈</span> <span>Heritage</span
+        ><span class="sep">◈</span> <span>Silence</span
+        ><span class="sep">◈</span> <span>Stars</span><span class="sep">◈</span>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-symbol">◈</span>
+          <p>Desert Oasis</p>
+          <small>Est. 1987 · Sahara Region</small>
+        </div>
+        <div class="footer-links">
+          <a href="#">Explore</a>
+          <a href="#">Retreats</a>
+          <a href="#">Gallery</a>
+          <a href="#">Press</a>
+          <a href="#">Contact</a>
+        </div>
+        <p class="footer-copy">© 2026 Desert Oasis. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

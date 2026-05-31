@@ -23,7 +23,7 @@ The purpose of this repository is to:
 
 ## 📬 Contact
 * **Name:** Uday Kalse
-* **LinkedIn:** [\[Insert your LinkedIn Link here\]](https://www.linkedin.com/in/uday-k-877221391/)
+* **LinkedIn:** (https://www.linkedin.com/in/uday-k-877221391/)
 * **Email:** udaykalse123@gmail.com
 
 ---

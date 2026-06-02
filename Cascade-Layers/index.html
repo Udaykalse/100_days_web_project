@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascade Layers 101</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+
+    <div class="noise-overlay"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-bracket">{</span>
+          <span class="logo-text">Cascade</span>
+          <span class="logo-bracket">}</span>
+        </div>
+        <nav class="main-nav" id="main-nav">
+          <a href="/" class="nav-link active">Home</a>
+          <a href="#articles" class="nav-link">Articles</a>
+          <a href="#layers" class="nav-link">Layers</a>
+          <a href="#about" class="nav-link">About</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon">◐</span>
+          </button>
+          <a href="/login" class="btn btn-primary">Get Started</a>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-tag">
+          <span class="tag-dot"></span>
+          CSS Architecture
+        </div>
+        <h1 class="hero-title">
+          Master the
+          <em>Cascade</em>
+          <br />Like Never Before
+        </h1>
+        <p class="hero-subtitle">
+          Understand selector specificity, inheritance, and cascade layers — the fundamentals that separate great CSS developers from the rest.
+        </p>
+        <div class="hero-actions">
+          <a href="#articles" class="btn btn-primary btn-lg">Start Learning</a>
+          <a href="#layers" class="btn btn-ghost btn-lg">
+            <span class="play-icon">▶</span> Watch Demo
+          </a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <strong>12</strong> Lessons
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <strong>3</strong> Hours
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <strong>Free</strong> Forever
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="layer-stack" id="layerStack">
+          <div class="layer-card" data-layer="utility">utility</div>
+          <div class="layer-card" data-layer="components">components</div>
+          <div class="layer-card" data-layer="content">content</div>
+          <div class="layer-card" data-layer="layout">layout</div>
+          <div class="layer-card" data-layer="theme">theme</div>
+          <div class="layer-card" data-layer="reset">reset</div>
+        </div>
+      </div>
+    </section>
+
+    <main id="articles">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Latest</span>
+          <h2 class="section-title">Featured Article</h2>
+        </div>
+
+        <article class="featured-article" id="article-main">
+          <div class="article-header">
+            <div class="article-badges">
+              <span class="badge badge-new">New</span>
+              <span class="badge badge-topic">Specificity</span>
+            </div>
+            <h2 class="article-title">Selector Specificity: The Hidden Rulebook</h2>
+            <div class="article-byline">
+              <div class="author-avatar">M</div>
+              <div class="author-info">
+                <span class="author-name">Mario Rossi</span>
+                <span class="author-meta">2 hours ago · 5 min read</span>
+              </div>
+              <button class="bookmark-btn" id="bookmarkBtn" aria-label="Bookmark article">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="article-body">
+            <p class="lead">
+              Every CSS rule you write enters a silent competition. The browser evaluates <a href="/">specificity scores</a>, source order, and cascade layers to decide which rule wins. Understanding this mechanism transforms how you write CSS.
+            </p>
+            <p>
+              The specificity algorithm assigns a three-part score to every selector. Inline styles dominate with a score of (1,0,0,0), ID selectors contribute (0,1,0,0), class and attribute selectors add (0,0,1,0), and element selectors score (0,0,0,1). The browser reads these like coordinates — a single ID always outweighs any number of classes.
+            </p>
+
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-lang">CSS</span>
+                <button class="copy-btn" data-code="specificity-example">Copy</button>
+              </div>
+              <pre><code id="specificity-example">@layer reset, theme, layout, content, components, utility;
+
+/* Specificity: (0,0,1,0) — class selector */
+.card { background: white; }
+
+/* Specificity: (0,1,0,0) — ID selector, always wins */
+#hero .card { background: teal; }
+
+/* Layer order beats specificity! */
+@layer utility {
+  .card { background: coral; } /* Wins via layer priority */
+}</code></pre>
+            </div>
+
+            <p>
+              Cascade layers introduced in CSS 2022 change the game entirely. A rule inside a <a href="/about">higher-priority layer</a> wins over a rule with higher specificity in a lower-priority layer. This unlocks clean, predictable CSS architecture at scale.
+            </p>
+            <p>
+              The order you declare layers matters enormously. Later-declared layers have higher priority. This means you can safely import third-party libraries into a low-priority layer without worrying about specificity wars.
+            </p>
+          </div>
+
+          <footer class="article-footer">
+            <div class="footer-left">
+              <button class="react-btn" id="likeBtn">
+                <span class="react-icon">♥</span>
+                <span class="react-count" id="likeCount">128</span>
+              </button>
+              <button class="react-btn">
+                <span class="react-icon">💬</span>
+                <span>24</span>
+              </button>
+            </div>
+            <a href="/articles" class="btn btn-primary">Read Full Article →</a>
+          </footer>
+        </article>
+
+        <section class="cards-section" id="layers">
+          <div class="section-header">
+            <span class="section-label">Explore</span>
+            <h2 class="section-title">Core Concepts</h2>
+          </div>
+
+          <div class="search-bar">
+            <span class="search-icon">⌕</span>
+            <input type="text" id="searchInput" placeholder="Search concepts..." class="search-input" />
+            <kbd>⌘K</kbd>
+          </div>
+
+          <div class="cards-grid" id="cardsGrid">
+            <div class="card" data-topic="css rules cascade">
+              <div class="card-icon">⚖️</div>
+              <h3>CSS Rules & Cascade</h3>
+              <p>Understand how the browser resolves conflicting declarations using origin, importance, and specificity.</p>
+              <div class="card-footer">
+                <span class="card-tag">Beginner</span>
+                <a href="/" class="btn btn-sm">Explore →</a>
+              </div>
+            </div>
+            <div class="card" data-topic="specificity headaches selectors">
+              <div class="card-icon">🎯</div>
+              <h3>Specificity Headaches</h3>
+              <p>Diagnose and fix the most frustrating specificity battles — without resorting to <code>!important</code>.</p>
+              <div class="card-footer">
+                <span class="card-tag">Intermediate</span>
+                <a href="/" class="btn btn-sm">Explore →</a>
+              </div>
+            </div>
+            <div class="card card-featured" data-topic="layers cascade architecture">
+              <div class="card-icon">🏗️</div>
+              <h3>Layers to the Rescue</h3>
+              <p>Use <code>@layer</code> to architect your CSS like a pro — predictable, maintainable, and specificity-free.</p>
+              <div class="card-footer">
+                <span class="card-tag">Advanced</span>
+                <a href="/" class="btn btn-sm">Explore →</a>
+              </div>
+            </div>
+            <div class="card" data-topic="inheritance custom properties variables">
+              <div class="card-icon">🧬</div>
+              <h3>Inheritance & Custom Props</h3>
+              <p>Leverage CSS custom properties and inheritance to build elegant, themeable component systems.</p>
+              <div class="card-footer">
+                <span class="card-tag">Intermediate</span>
+                <a href="/" class="btn btn-sm">Explore →</a>
+              </div>
+            </div>
+            <div class="card" data-topic="import layers third party">
+              <div class="card-icon">📦</div>
+              <h3>Layered @import</h3>
+              <p>Safely integrate third-party stylesheets like Bulma or Tailwind using <code>@import ... layer()</code>.</p>
+              <div class="card-footer">
+                <span class="card-tag">Advanced</span>
+                <a href="/" class="btn btn-sm">Explore →</a>
+              </div>
+            </div>
+            <div class="card" data-topic="reset normalize base styles">
+              <div class="card-icon">🔄</div>
+              <h3>Modern CSS Resets</h3>
+              <p>Write reset styles that don't bleed into your components — using cascade layers as a safety net.</p>
+              <div class="card-footer">
+                <span class="card-tag">Beginner</span>
+                <a href="/" class="btn btn-sm">Explore →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="no-results" id="noResults" style="display:none;">
+            <span>🔍</span>
+            <p>No concepts found for "<span id="searchTerm"></span>"</p>
+          </div>
+        </section>
+
+        <section class="specificity-calculator" id="about">
+          <div class="section-header">
+            <span class="section-label">Tool</span>
+            <h2 class="section-title">Specificity Calculator</h2>
+          </div>
+          <div class="calculator-inner">
+            <div class="calc-input-area">
+              <label for="selectorInput">Enter a CSS selector</label>
+              <input type="text" id="selectorInput" placeholder=".nav > a.active:hover" class="calc-input" />
+              <button class="btn btn-primary" id="calcBtn">Calculate</button>
+            </div>
+            <div class="calc-result" id="calcResult">
+              <div class="spec-score">
+                <div class="spec-col">
+                  <span class="spec-num" id="specA">0</span>
+                  <span class="spec-label">IDs</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-num" id="specB">0</span>
+                  <span class="spec-label">Classes</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-num" id="specC">0</span>
+                  <span class="spec-label">Elements</span>
+                </div>
+              </div>
+              <p class="spec-verdict" id="specVerdict">Enter a selector above to calculate its specificity score.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-bracket">{</span>
+            <span class="logo-text">Cascade</span>
+            <span class="logo-bracket">}</span>
+          </div>
+          <p>Making CSS architecture approachable for every developer.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Learn</h4>
+            <a href="#">Getting Started</a>
+            <a href="#">Cascade Layers</a>
+            <a href="#">Specificity</a>
+          </div>
+          <div class="footer-col">
+            <h4>Community</h4>
+            <a href="#">Discord</a>
+            <a href="#">GitHub</a>
+            <a href="#">Newsletter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>© 2025 Cascade Layers 101. Built with pure CSS & vanilla JS.</p>
+        <p>Made with ♥ for the web</p>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

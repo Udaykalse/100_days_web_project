@@ -1,162 +1,112 @@
-const modal = document.getElementById("modal");
-const loginBtn = document.getElementById("loginBtn");
-const mobileLoginBtn = document.getElementById("mobileLoginBtn");
-const modalClose = document.getElementById("modalClose");
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
-const navbar = document.getElementById("navbar");
-const togglePass = document.getElementById("togglePass");
-const passwordInput = document.getElementById("password");
-const loginSubmit = document.getElementById("loginSubmit");
-const toast = document.getElementById("toast");
-const cursorDot = document.querySelector(".cursor-dot");
-const cursorRing = document.querySelector(".cursor-ring");
+# 🟢 Hulu Clone
 
-let dotX = 0, dotY = 0;
-let ringX = 0, ringY = 0;
+A polished, modern Hulu landing page clone built with pure HTML, CSS, and vanilla JavaScript. Features a dark editorial aesthetic, cinematic animations, custom cursor, and a fully responsive layout — no frameworks, no dependencies, ready to run in any browser.
 
-document.addEventListener("mousemove", (e) => {
-  dotX = e.clientX;
-  dotY = e.clientY;
-  cursorDot.style.left = dotX + "px";
-  cursorDot.style.top = dotY + "px";
-});
+---
 
-function animateRing() {
-  ringX += (dotX - ringX) * 0.12;
-  ringY += (dotY - ringY) * 0.12;
-  cursorRing.style.left = ringX + "px";
-  cursorRing.style.top = ringY + "px";
-  requestAnimationFrame(animateRing);
-}
-animateRing();
+## 📁 Project Structure
 
-const hoverables = "a, button, .cover, .plan-card, .sport-logo-wrap";
-document.querySelectorAll(hoverables).forEach((el) => {
-  el.addEventListener("mouseenter", () => document.body.classList.add("cursor-hover"));
-  el.addEventListener("mouseleave", () => document.body.classList.remove("cursor-hover"));
-});
+```
+hulu-clone/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+└── README.md
+```
 
-const openModal = () => {
-  modal.classList.add("open");
-  document.body.style.overflow = "hidden";
-};
+---
 
-const closeModal = () => {
-  modal.classList.remove("open");
-  document.body.style.overflow = "";
-};
+## 🚀 Getting Started
 
-loginBtn.addEventListener("click", openModal);
-if (mobileLoginBtn) mobileLoginBtn.addEventListener("click", () => { closeMenu(); openModal(); });
-modalClose.addEventListener("click", closeModal);
+No build tools or installs needed.
 
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) closeModal();
-});
+1. Clone or download the repository
+2. Open `index.html` in your browser
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
-});
+```bash
+git clone https://github.com/your-username/hulu-clone.git
+cd hulu-clone
+open index.html
+```
 
-const openMenu = () => {
-  hamburger.classList.add("active");
-  mobileMenu.classList.add("open");
-};
+Or serve it locally with any static server:
 
-const closeMenu = () => {
-  hamburger.classList.remove("active");
-  mobileMenu.classList.remove("open");
-};
+```bash
+npx serve .
+# or
+python3 -m http.server 8080
+```
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.contains("active") ? closeMenu() : openMenu();
-});
+---
 
-mobileMenu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", closeMenu);
-});
+## ✨ Features
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 60) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
+| Feature | Description |
+|---|---|
+| Custom Cursor | Green dot + trailing ring cursor; scales on interactive elements |
+| Sticky Navbar | Transparent on load, frosted-glass blur effect on scroll |
+| Mobile Menu | Animated hamburger → X toggle with full dropdown navigation |
+| Hero Section | Full-viewport header with cinematic gradient overlay and scroll hint |
+| Scroll Reveal | Sections animate into view via IntersectionObserver |
+| Categories | 4 cover cards with lift-on-hover, shadow, and reveal CTAs |
+| Live TV Section | Green-bordered feature block with radial glow background |
+| Live Sports | Full-bleed background section with sport league logos |
+| Pricing Plans | 3-tier plan cards with highlighted tier, features list, and CTAs |
+| Login Modal | Dark-themed dialog with password toggle, email validation, loading state |
+| Toast Notifications | Pill-shaped animated toasts for validation and success feedback |
+| Responsive Design | Fully adapted for mobile, tablet, and desktop breakpoints |
 
-togglePass.addEventListener("click", () => {
-  const isPassword = passwordInput.type === "password";
-  passwordInput.type = isPassword ? "text" : "password";
-  togglePass.querySelector("svg").style.opacity = isPassword ? "0.5" : "1";
-});
+---
 
-let toastTimeout;
-const showToast = (message) => {
-  toast.textContent = message;
-  toast.classList.add("show");
-  clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(() => toast.classList.remove("show"), 3000);
-};
+## 🎨 Design System
 
-loginSubmit.addEventListener("click", () => {
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
+**Fonts**
+- Display: [Syne](https://fonts.google.com/specimen/Syne) — headings, labels, buttons
+- Body: [DM Sans](https://fonts.google.com/specimen/DM+Sans) — paragraphs, UI text
 
-  if (!email || !password) {
-    showToast("Please fill in all fields.");
-    return;
-  }
+**Color Tokens**
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    showToast("Please enter a valid email address.");
-    return;
-  }
+```css
+--green:       #1ce783   /* Primary accent */
+--green-dark:  #00b360   /* Hover state */
+--black:       #050505   /* Page background */
+--dark:        #0d0d0d   /* Section background */
+--dark-2:      #151516   /* Card background */
+--gray:        #8a8a8e   /* Muted text */
+--gray-light:  #c5c5c8   /* Secondary text */
+```
 
-  loginSubmit.textContent = "Logging In...";
-  loginSubmit.disabled = true;
+---
 
-  setTimeout(() => {
-    loginSubmit.textContent = "Log In";
-    loginSubmit.disabled = false;
-    showToast("Login successful! Welcome back.");
-    closeModal();
-  }, 1200);
-});
+## 📱 Responsive Breakpoints
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+| Breakpoint | Layout |
+|---|---|
+| `> 1200px` | Full 4-column covers, 3-column plans |
+| `≤ 1200px` | 2-column covers, 2-column plans |
+| `≤ 960px` | Mobile nav, single-column plans, stacked sub-header |
+| `≤ 640px` | Single-column covers, compact hero, simplified footer |
 
-document.querySelectorAll(".sub-header, .categories, .live, .live-sports, .plans, .cover, .plan-card").forEach((el) => {
-  el.classList.add("reveal");
-  revealObserver.observe(el);
-});
+---
 
-document.querySelectorAll(".cover").forEach((cover) => {
-  cover.addEventListener("mouseenter", () => {
-    cover.style.zIndex = "2";
-  });
-  cover.addEventListener("mouseleave", () => {
-    cover.style.zIndex = "1";
-  });
-});
+## 🛠️ Built With
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (e) => {
-    const target = document.querySelector(anchor.getAttribute("href"));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  });
-});
+- **HTML5** — semantic markup, ARIA roles and labels for accessibility
+- **CSS3** — custom properties, grid, flexbox, keyframe animations, backdrop-filter
+- **Vanilla JavaScript** — IntersectionObserver, requestAnimationFrame, DOM API
+
+---
+
+## 📌 Credits
+
+- Original project concept by [Brad Traversy](https://github.com/bradtraversy/hulu-webpage-clone)
+- Images and logos sourced from the original Traversy Media repository
+- Redesigned and extended with modern UI/UX patterns
+
+---
+
+## 📄 License
+
+This project is for educational purposes only. Hulu, Disney+, ESPN+, and all associated trademarks belong to their respective owners.

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Stream TV and Movies Live and Online | Hulu</title>
+  </head>
+  <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <header class="header">
+      <nav class="nav" id="navbar">
+        <div class="nav-logo">
+          <img
+            src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/logo.png?raw=true"
+            alt="Hulu"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#categories">Browse</a></li>
+          <li><a href="#live">Live TV</a></li>
+          <li><a href="#sports">Sports</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="login-btn" id="loginBtn" aria-label="Log In">
+            Log In
+          </button>
+          <button class="btn btn-cta nav-trial">Start Free Trial</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="#categories">Browse</a></li>
+          <li><a href="#live">Live TV</a></li>
+          <li><a href="#sports">Sports</a></li>
+          <li><button class="login-btn" id="mobileLoginBtn">Log In</button></li>
+        </ul>
+      </div>
+
+      <div class="hero-content">
+        <span class="eyebrow">Try up to one month free</span>
+        <img
+          src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/logo.png?raw=true"
+          alt="Hulu"
+          class="hero-logo animate-fade-up"
+        />
+        <p class="hero-tagline animate-fade-up delay-1">
+          Watch thousands of TV shows and movies.
+        </p>
+        <p class="hero-sub animate-fade-up delay-2">
+          HBO Max™, SHOWTIME®, CINEMAX® and STARZ® available as add-ons.
+        </p>
+        <button class="btn btn-cta animate-fade-up delay-3">
+          Start Your Free Trial
+        </button>
+        <p class="legal-text animate-fade-up delay-4">
+          Free trial for new &amp; eligible returning subscribers only.
+        </p>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </header>
+
+    <section class="sub-header">
+      <div class="bundle-logo">
+        <img
+          src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/logos.png?raw=true"
+          alt="Disney Bundle Logos"
+        />
+      </div>
+      <div class="bundle-text">
+        <h4>Bundle with any Hulu plan &amp; save</h4>
+        <h3>Get Hulu, Disney+, and ESPN+.</h3>
+        <a href="#" class="sub-link">Details</a>
+      </div>
+      <div class="bundle-cta">
+        <a href="#" class="btn btn-outline">Get Bundle</a>
+        <a href="#" class="sub-link center">Terms apply</a>
+      </div>
+    </section>
+
+    <section class="categories" id="categories">
+      <div class="section-label">Included in all plans</div>
+      <h2 class="section-title">All the TV You Love</h2>
+      <p class="sub-text">
+        Stream full seasons of exclusive series, current-season episodes, hit
+        movies, Hulu Originals, kids shows, and more.
+      </p>
+      <div class="covers">
+        <div class="cover cover-1" data-index="1">
+          <div class="cover-grad"></div>
+          <div class="cover-text">
+            <div class="sub-title">Past &amp; Current Seasons</div>
+            <h3>TV Shows</h3>
+          </div>
+          <div class="cover-hover-cta">Browse Shows →</div>
+        </div>
+        <div class="cover cover-2" data-index="2">
+          <div class="cover-grad"></div>
+          <div class="cover-text">
+            <div class="sub-title">New &amp; Classics</div>
+            <h3>Movies</h3>
+          </div>
+          <div class="cover-hover-cta">Browse Movies →</div>
+        </div>
+        <div class="cover cover-3" data-index="3">
+          <div class="cover-grad"></div>
+          <div class="cover-text">
+            <div class="sub-title">Groundbreaking</div>
+            <h3>Hulu Originals</h3>
+          </div>
+          <div class="cover-hover-cta">Browse Originals →</div>
+        </div>
+        <div class="cover cover-4" data-index="4">
+          <div class="cover-grad"></div>
+          <div class="cover-text">
+            <div class="sub-title">Add-On</div>
+            <h3>Premiums</h3>
+          </div>
+          <div class="cover-hover-cta">Browse Premiums →</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="live" id="live">
+      <div class="live-inner">
+        <div class="live-badge">Hulu + Live TV</div>
+        <h2 class="section-title">Live TV Makes It Better</h2>
+        <p class="sub-text">
+          Make the switch from cable. Get 75+ top channels with your favorite
+          live sports, news, and events — plus the entire Hulu streaming
+          library.
+        </p>
+        <p class="legal-text">
+          Live TV plan required. Regional restrictions, blackouts and additional
+          terms apply. See details
+        </p>
+        <a href="#" class="live-link"
+          >View Channels in Your Area <span class="arrow-icon">→</span></a
+        >
+      </div>
+    </section>
+
+    <section class="live-sports" id="sports">
+      <div class="live-sports-content">
+        <div class="sports-eyebrow">Live Sports</div>
+        <h2 class="section-title">Never Miss a Game</h2>
+        <p class="sub-text">
+          Catch your games at home or on the go. Stream live games from major
+          college and pro leagues including the NCAA®, NBA, NHL, NFL, and more.
+        </p>
+        <div class="live-sports-logos">
+          <div class="sport-logo-wrap">
+            <img
+              src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/live-sports-logo-1.png?raw=true"
+              alt="NCAA"
+            />
+          </div>
+          <div class="sport-logo-wrap">
+            <img
+              src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/live-sports-logo-2.png?raw=true"
+              alt="NBA"
+            />
+          </div>
+          <div class="sport-logo-wrap">
+            <img
+              src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/live-sports-logo-3.svg?raw=true"
+              alt="NFL"
+            />
+          </div>
+          <div class="sport-logo-wrap">
+            <img
+              src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/live-sports-logo-4.png?raw=true"
+              alt="NHL"
+            />
+          </div>
+        </div>
+        <p class="legal-text">
+          Live TV plan required. Regional restrictions, blackouts and additional
+          terms apply. See details
+        </p>
+      </div>
+    </section>
+
+    <section class="plans">
+      <div class="plans-inner">
+        <div class="section-label">Choose Your Plan</div>
+        <h2 class="section-title">Pick the Plan That's Right for You</h2>
+        <div class="plans-grid">
+          <div class="plan-card">
+            <div class="plan-badge">Most Popular</div>
+            <h3 class="plan-name">Hulu</h3>
+            <div class="plan-price">
+              <span class="price-amount">$7.99</span
+              ><span class="price-period">/mo</span>
+            </div>
+            <p class="plan-desc">With Ads</p>
+            <ul class="plan-features">
+              <li>Unlimited movies &amp; TV</li>
+              <li>Watch on your devices</li>
+              <li>Students save 75%</li>
+            </ul>
+            <button class="btn btn-cta plan-btn">Start Free Trial</button>
+          </div>
+          <div class="plan-card plan-card--highlight">
+            <h3 class="plan-name">Hulu</h3>
+            <div class="plan-price">
+              <span class="price-amount">$17.99</span
+              ><span class="price-period">/mo</span>
+            </div>
+            <p class="plan-desc">No Ads</p>
+            <ul class="plan-features">
+              <li>Ad-free streaming</li>
+              <li>Downloads available</li>
+              <li>Watch on 2 screens</li>
+            </ul>
+            <button class="btn plan-btn btn-outline-green">
+              Start Free Trial
+            </button>
+          </div>
+          <div class="plan-card">
+            <h3 class="plan-name">Hulu + Live TV</h3>
+            <div class="plan-price">
+              <span class="price-amount">$76.99</span
+              ><span class="price-period">/mo</span>
+            </div>
+            <p class="plan-desc">With Ads</p>
+            <ul class="plan-features">
+              <li>75+ Live TV channels</li>
+              <li>Unlimited Cloud DVR</li>
+              <li>6 user profiles</li>
+            </ul>
+            <button class="btn btn-cta plan-btn">Start Free Trial</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img
+            src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/logo.png?raw=true"
+            alt="Hulu"
+            class="footer-logo"
+          />
+          <p>The best of streaming, live TV, and more.</p>
+        </div>
+        <div class="footer-lists">
+          <ul>
+            <li class="list-head">Browse</li>
+            <li><a href="#">Streaming Library</a></li>
+            <li><a href="#">Live TV</a></li>
+            <li><a href="#">Live News</a></li>
+            <li><a href="#">Live Sports</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Originals</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Add-Ons</li>
+            <li><a href="#">Hulu, Disney+, and ESPN+</a></li>
+            <li><a href="#">Disney Bundle</a></li>
+            <li><a href="#">HBO Max</a></li>
+            <li><a href="#">Cinemax</a></li>
+            <li><a href="#">Showtime</a></li>
+            <li><a href="#">STARZ</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">Help</li>
+            <li><a href="#">Account &amp; Billing</a></li>
+            <li><a href="#">Plans &amp; Pricing</a></li>
+            <li><a href="#">Supported Devices</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+          <ul>
+            <li class="list-head">About Us</li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"
+              ><img
+                src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/facebook.svg?raw=true"
+                alt="Facebook"
+            /></a>
+            <a href="#" aria-label="Twitter"
+              ><img
+                src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/twitter.svg?raw=true"
+                alt="Twitter"
+            /></a>
+            <a href="#" aria-label="YouTube"
+              ><img
+                src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/youtube.svg?raw=true"
+                alt="YouTube"
+            /></a>
+            <a href="#" aria-label="Instagram"
+              ><img
+                src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/instagram.svg?raw=true"
+                alt="Instagram"
+            /></a>
+          </div>
+          <p class="footer-copy">© 2024 Hulu, LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal"
+      id="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">
+          <img
+            src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/close.svg?raw=true"
+            alt="close"
+          />
+        </button>
+        <div class="modal-body">
+          <img
+            src="https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/logo.png?raw=true"
+            alt="Hulu"
+            class="modal-logo"
+          />
+          <h3 id="modalTitle">Welcome Back</h3>
+          <p class="modal-sub">Log in to continue watching.</p>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+              />
+              <button
+                type="button"
+                class="toggle-pass"
+                id="togglePass"
+                aria-label="Toggle password visibility"
+              >
+                <svg
+                  id="eyeIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <a href="#" class="forgot-link">Forgot your email or password?</a>
+          <button class="btn btn-dark" id="loginSubmit">Log In</button>
+          <div class="modal-divider"><span>or</span></div>
+          <button class="btn btn-social">Continue with Google</button>
+        </div>
+        <div class="modal-footer">
+          <p>Don't have an account? <a href="#">Start your free trial</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast">Please fill in all fields.</div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

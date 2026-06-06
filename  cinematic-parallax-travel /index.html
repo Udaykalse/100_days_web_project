@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Yayavar — Explore India</title>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <section class="hero" id="hero">
+      <nav>
+        <a class="logo" href="#">yayavar</a>
+        <div class="nav-links">
+          <a href="#destinations">Destinations</a>
+          <a href="#about">About</a>
+          <a class="btn-signup" href="#">Sign Up</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#destinations">Destinations</a>
+        <a href="#about">About</a>
+        <a href="#">Sign Up</a>
+      </div>
+
+      <div class="hero-container" id="heroContainer">
+        <h2 class="main-title" id="mainTitle">Explore.</h2>
+        <div class="scroll-hint" id="scrollHint">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+        <img
+          src="https://i.ibb.co/rsp6RFJ/bg1.png"
+          class="layer background"
+          data-speed="0.1"
+          alt=""
+        />
+        <img
+          src="https://i.ibb.co/237VsHs/girl1.png"
+          class="layer girl"
+          data-speed="0.4"
+          alt=""
+        />
+        <img
+          src="https://i.ibb.co/BKtjhV2/rock1.png"
+          class="layer rock"
+          data-speed="0.7"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <section class="content" id="content">
+      <div class="content-inner">
+        <div class="section-label">Featured Destinations</div>
+        <h3 class="section-title">Sacred India</h3>
+
+        <div class="content-images" id="destinations">
+          <div class="card" data-tilt>
+            <div class="card-img-wrap">
+              <img src="https://i.ibb.co/w4N157P/haridwar.jpg" alt="Haridwar" />
+              <div class="card-overlay">
+                <span>Explore →</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h4>Haridwar</h4>
+              <h3>India</h3>
+              <p>Gateway to the Gods — where the Ganges meets the divine.</p>
+            </div>
+          </div>
+
+          <div class="card" data-tilt>
+            <div class="card-img-wrap">
+              <img
+                src="https://i.ibb.co/v4yCXYS/rishikesh.jpg"
+                alt="Rishikesh"
+              />
+              <div class="card-overlay">
+                <span>Explore →</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h4>Rishikesh</h4>
+              <h3>India</h3>
+              <p>Yoga capital of the world, cradled by the Himalayas.</p>
+            </div>
+          </div>
+
+          <div class="card card--locked" data-tilt>
+            <div class="card-img-wrap">
+              <div class="card-placeholder">
+                <span>Coming Soon</span>
+              </div>
+            </div>
+            <div class="card-info">
+              <h4>Varanasi</h4>
+              <h3>India</h3>
+              <p>One of the world's oldest living cities.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-block" id="about">
+          <div class="about-text">
+            <p class="text fade-in">
+              Yayavar is a Sanskrit word for the wanderer — one who roams not
+              out of restlessness, but in search of meaning. We curate journeys
+              to India's most soul-stirring destinations, weaving together
+              culture, spirituality, and raw natural beauty.
+            </p>
+            <p class="text fade-in">
+              Every place we feature carries a story older than memory. We
+              invite you to become part of it — to walk the same ghats, trails,
+              and temples that have shaped civilisations across millennia.
+            </p>
+          </div>
+          <div class="stats">
+            <div class="stat fade-in">
+              <span class="stat-num" data-target="48">0</span>
+              <span class="stat-label">Destinations</span>
+            </div>
+            <div class="stat fade-in">
+              <span class="stat-num" data-target="12">0</span>
+              <span class="stat-label">States Covered</span>
+            </div>
+            <div class="stat fade-in">
+              <span class="stat-num" data-target="3200">0</span>
+              <span class="stat-label">Travelers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>© 2025 Yayavar. Wander with purpose.</p>
+        <div class="footer-links">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Contact</a>
+        </div>
+      </footer>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

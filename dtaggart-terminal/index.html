@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://rawcdn.githack.com/nextapps-de/winbox/0.2.0/dist/css/winbox.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>dtaggart — terminal</title>
+  </head>
+  <body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+
+    <div class="container">
+      <header class="terminal-header">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+          </div>
+          <span class="terminal-title">dtaggart@portfolio ~ bash</span>
+          <div class="terminal-time" id="terminalTime"></div>
+        </div>
+      </header>
+
+      <main class="terminal-body">
+        <div class="boot-sequence" id="bootSequence">
+          <p class="boot-line" style="--d: 0ms">Initializing system...</p>
+          <p class="boot-line" style="--d: 300ms">
+            Loading profile data... <span class="ok">[OK]</span>
+          </p>
+          <p class="boot-line" style="--d: 600ms">
+            Mounting filesystem... <span class="ok">[OK]</span>
+          </p>
+          <p class="boot-line" style="--d: 900ms">
+            Starting terminal... <span class="ok">[OK]</span>
+          </p>
+        </div>
+
+        <section class="prompt-section">
+          <div class="prompt-line">
+            <span class="prompt-user">dtaggart</span
+            ><span class="prompt-at">@</span
+            ><span class="prompt-host">portfolio</span
+            ><span class="prompt-sep">:</span><span class="prompt-path">~</span
+            ><span class="prompt-dollar">$</span>
+            <span class="prompt-cmd" id="typedCmd"></span
+            ><span class="cursor">▌</span>
+          </div>
+
+          <div class="output" id="mainOutput">
+            <div class="ascii-name">
+              <pre id="asciiArt"></pre>
+            </div>
+            <p class="tagline">Full-stack developer · 14 years of experience</p>
+
+            <div class="section-block">
+              <span class="label">→ skills</span>
+              <div class="skill-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">PHP</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">React</span>
+                <span class="tag">SQL</span>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <span class="label">→ find_me_online</span>
+              <ul class="link-list">
+                <li>
+                  <span class="link-icon">▸</span
+                  ><a href="#" class="link" data-hover="youtube">YouTube</a>
+                </li>
+                <li>
+                  <span class="link-icon">▸</span
+                  ><a href="#" class="link" data-hover="twitter">Twitter</a>
+                </li>
+                <li>
+                  <span class="link-icon">▸</span
+                  ><a href="#" class="link" data-hover="github">GitHub</a>
+                </li>
+                <li>
+                  <span class="link-icon">▸</span
+                  ><a href="#" class="link" data-hover="codepen">CodePen</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <span class="label">→ commands</span>
+              <nav class="cmd-nav">
+                <button class="cmd-btn" id="about" data-cmd="cat about.txt">
+                  ./about
+                </button>
+                <button class="cmd-btn" id="contact" data-cmd="cat contact.txt">
+                  ./contact
+                </button>
+                <button class="cmd-btn" id="projects" data-cmd="ls projects/">
+                  ./projects
+                </button>
+              </nav>
+            </div>
+
+            <div class="mini-terminal" id="miniTerminal">
+              <div class="mini-prompt">
+                <span class="prompt-user">dtaggart</span
+                ><span class="prompt-at">@</span
+                ><span class="prompt-host">portfolio</span
+                ><span class="prompt-sep">:</span
+                ><span class="prompt-path">~</span
+                ><span class="prompt-dollar">$</span>
+                <span id="miniTyped"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="terminal-footer">
+        <span>uptime: <span id="uptime">0s</span></span>
+        <span>processes: 3</span>
+        <span>mem: 42.0 MB</span>
+      </footer>
+    </div>
+
+    <div class="hidden">
+      <div id="about-content">
+        <div class="wb-section">
+          <span class="wb-prompt">cat about.txt</span>
+          <h2 class="wb-title">about-me:$<span class="cursor">▌</span></h2>
+          <p>
+            My name is <strong>Dagny Taggart</strong> and I have been
+            programming for <strong>14 years</strong>.
+          </p>
+          <p>
+            Some of the languages that I am fluent in include JavaScript,
+            Python, and PHP.
+          </p>
+          <p>
+            I specialize in building fast, accessible, and beautiful web
+            experiences from concept to deployment.
+          </p>
+          <div class="wb-stats">
+            <div class="wb-stat">
+              <span class="wb-stat-num">14</span
+              ><span class="wb-stat-label">years exp.</span>
+            </div>
+            <div class="wb-stat">
+              <span class="wb-stat-num">120+</span
+              ><span class="wb-stat-label">projects</span>
+            </div>
+            <div class="wb-stat">
+              <span class="wb-stat-num">3</span
+              ><span class="wb-stat-label">languages</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact-content">
+        <div class="wb-section">
+          <span class="wb-prompt">cat contact.txt</span>
+          <h2 class="wb-title">contact-me:$<span class="cursor">▌</span></h2>
+          <p>You can reach me through any of the channels below.</p>
+          <ul class="wb-contact-list">
+            <li>
+              <span class="wb-contact-icon">☎</span>
+              <span>555-555-5555</span>
+            </li>
+            <li>
+              <span class="wb-contact-icon">✉</span>
+              <a href="mailto:dagny@taggart.com">dagny@taggart.com</a>
+            </li>
+            <li>
+              <span class="wb-contact-icon">◆</span>
+              <a href="#">linkedin.com/in/dtaggart</a>
+            </li>
+          </ul>
+          <div class="wb-availability">
+            <span class="avail-dot"></span> Available for freelance work
+          </div>
+        </div>
+      </div>
+
+      <div id="projects-content">
+        <div class="wb-section">
+          <span class="wb-prompt">ls projects/</span>
+          <h2 class="wb-title">projects:$<span class="cursor">▌</span></h2>
+          <ul class="project-list">
+            <li class="project-item">
+              <span class="project-name">cli-dashboard</span>
+              <span class="project-lang">JavaScript</span>
+              <p>
+                A terminal-style productivity dashboard built with vanilla JS.
+              </p>
+            </li>
+            <li class="project-item">
+              <span class="project-name">pyanalytics</span>
+              <span class="project-lang">Python</span>
+              <p>Data pipeline and visualisation toolkit for log analysis.</p>
+            </li>
+            <li class="project-item">
+              <span class="project-name">restforge</span>
+              <span class="project-lang">PHP</span>
+              <p>Lightweight REST API framework with zero dependencies.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://rawcdn.githack.com/nextapps-de/winbox/0.2.0/dist/js/winbox.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

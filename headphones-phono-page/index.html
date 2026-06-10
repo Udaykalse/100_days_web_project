@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phono — Headphones of the Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#home" class="logo">Phono</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact" class="nav-cta">Shop Now</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+        <li><a href="#contact" class="mobile-link">Shop Now</a></li>
+      </ul>
+    </div>
+
+    <section id="home" class="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Next-Gen Audio</span>
+          <h1>Sound that <em>moves</em> you forward.</h1>
+          <p>Engineered for those who refuse to settle. Pure acoustics, zero compromise, built for the future.</p>
+          <div class="hero-actions">
+            <a href="#about" class="btn btn-primary">Explore Now</a>
+            <a href="#gallery" class="btn btn-ghost">View Gallery</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>40mm</strong><span>Drivers</span></div>
+            <div class="stat"><strong>30hr</strong><span>Battery</span></div>
+            <div class="stat"><strong>-35dB</strong><span>Noise Cancel</span></div>
+          </div>
+        </div>
+        <div class="hero-image reveal reveal-right">
+          <div class="hero-image-glow"></div>
+          <img src="https://i.ibb.co/ydpFGg6/showcase.png" alt="Phono headphones" />
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section id="about" class="manifesto">
+      <div class="manifesto-bg">
+        <img src="https://images.unsplash.com/photo-1593121925328-369cc8459c08?q=80&w=2070" alt="" />
+        <div class="manifesto-overlay"></div>
+      </div>
+      <div class="container manifesto-inner reveal">
+        <span class="eyebrow light">Our Philosophy</span>
+        <h2>People Aren't<br />Hearing All<br />the Music.</h2>
+        <p>Most headphones deliver sound. We deliver presence. Every frequency, every breath, every silence — rendered with intention.</p>
+        <a href="#gallery" class="btn btn-outline">See the Craft</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="features-header reveal">
+          <span class="eyebrow">Why Phono</span>
+          <h2>Built different,<br />by design.</h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon"><i class="fas fa-wave-square"></i></div>
+            <h3>Adaptive EQ</h3>
+            <p>Real-time audio tuning that adapts to your ear shape and listening environment automatically.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+            <h3>Neural Noise Cancel</h3>
+            <p>AI-powered noise cancellation trained on 50,000+ ambient environments. Silence on demand.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon"><i class="fas fa-battery-full"></i></div>
+            <h3>30-Hour Battery</h3>
+            <p>All-day and all-night listening. A 10-minute charge gives you three hours of playback.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon"><i class="fas fa-feather"></i></div>
+            <h3>Weightless Comfort</h3>
+            <p>Memory foam cushions and a titanium-alloy headband engineered to disappear on your head.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <div class="container gallery-header reveal">
+        <span class="eyebrow">Gallery</span>
+        <h2>Every angle, a statement.</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item big reveal">
+          <img src="https://images.unsplash.com/photo-1619113026857-7aa017691b1f?q=80&w=1887" alt="Headphones close-up" />
+          <div class="gallery-caption">Studio Series</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1509098681029-b45e9c845022?q=80&w=2070" alt="Headphones on table" />
+          <div class="gallery-caption">Matte Black</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1620578077783-33e254311182?w=500" alt="Headphones detail" />
+          <div class="gallery-caption">Carbon Detail</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?q=80&w=1935" alt="Headphones side" />
+          <div class="gallery-caption">Arc Frame</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1545127398-5aae47194b22?q=80&w=1935" alt="Headphones worn" />
+          <div class="gallery-caption">In Use</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1491927570842-0261e477d937?q=80&w=1887" alt="Headphones product" />
+          <div class="gallery-caption">Glacier White</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta-band reveal">
+      <div class="container cta-inner">
+        <div>
+          <span class="eyebrow light">Limited Drop</span>
+          <h2>First to hear,<br />first to own.</h2>
+        </div>
+        <div class="cta-form-wrap">
+          <p>Join the waitlist. We'll let you know the moment it launches.</p>
+          <div class="email-form" id="emailForm">
+            <input type="email" id="emailInput" placeholder="your@email.com" />
+            <button type="button" id="submitBtn">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <p class="form-feedback" id="formFeedback"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="logo">Phono</span>
+          <p>Sound for the future.<br />Crafted for right now.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Journal</h4>
+          <ul>
+            <li><a href="#">The Science of ANC</a></li>
+            <li><a href="#">Designing for Ears</a></li>
+            <li><a href="#">Battery Tech Deep Dive</a></li>
+            <li><a href="#">Studio vs Consumer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© 2026 Phono. All rights reserved.</span>
+          <span>Made with precision.</span>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

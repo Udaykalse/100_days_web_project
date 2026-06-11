@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+    <title>Three Dots — Laptops for the Future</title>
+  </head>
+  <body>
+    <div class="noise"></div>
+
+    <header>
+      <div class="logo-container">
+        <div class="logo-mark">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="logo-text">Three Dots</span>
+      </div>
+      <nav id="nav">
+        <ul class="nav-links">
+          <li><a href="#specs" class="nav-link">Specs</a></li>
+          <li><a href="#models" class="nav-link">Models</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Shopping cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-content">
+          <div class="eyebrow">New 2025 Collection</div>
+          <h1 class="hero-title">
+            Built for<br /><span class="gradient-text">what's next.</span>
+          </h1>
+          <p class="hero-desc">
+            A 14″ bezel-less 4K OLED display with touch input — engineered for creators who refuse to compromise.
+          </p>
+          <div class="hero-cta">
+            <div class="size-selector">
+              <button class="size-btn active" data-size="14">14″</button>
+              <button class="size-btn" data-size="16">16″</button>
+            </div>
+            <button class="btn-primary" id="addToCart">Add to Cart</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">4K</span>
+              <span class="stat-label">OLED Display</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value">32hr</span>
+              <span class="stat-label">Battery Life</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-value">1.1kg</span>
+              <span class="stat-label">Ultra Light</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="laptop-stage">
+            <img src="https://i.ibb.co/FJrnpsL/matebook.png" alt="Three Dots Laptop" class="laptop-img" id="laptopImg" />
+            <div class="glow-ring"></div>
+          </div>
+          <div class="carousel-dots" id="carouselDots">
+            <button class="dot active" data-index="0" aria-label="View 1"></button>
+            <button class="dot" data-index="1" aria-label="View 2"></button>
+            <button class="dot" data-index="2" aria-label="View 3"></button>
+          </div>
+        </div>
+
+        <div class="orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+      </section>
+
+      <section class="specs-strip" id="specs">
+        <div class="specs-track" id="specTrack">
+          <span>4K OLED Touch</span><span class="sep">·</span>
+          <span>Intel Core Ultra 9</span><span class="sep">·</span>
+          <span>64GB LPDDR5X RAM</span><span class="sep">·</span>
+          <span>2TB NVMe SSD</span><span class="sep">·</span>
+          <span>Thunderbolt 5</span><span class="sep">·</span>
+          <span>Wi-Fi 7</span><span class="sep">·</span>
+          <span>32-Hour Battery</span><span class="sep">·</span>
+          <span>4K OLED Touch</span><span class="sep">·</span>
+          <span>Intel Core Ultra 9</span><span class="sep">·</span>
+          <span>64GB LPDDR5X RAM</span><span class="sep">·</span>
+          <span>2TB NVMe SSD</span><span class="sep">·</span>
+          <span>Thunderbolt 5</span><span class="sep">·</span>
+          <span>Wi-Fi 7</span><span class="sep">·</span>
+          <span>32-Hour Battery</span><span class="sep">·</span>
+        </div>
+      </section>
+
+      <section class="models-section" id="models">
+        <div class="section-header">
+          <div class="eyebrow">Choose Your Machine</div>
+          <h2>Three configurations.<br />One standard.</h2>
+        </div>
+        <div class="models-grid">
+          <div class="model-card" data-model="essential">
+            <div class="model-badge">Essential</div>
+            <div class="model-price">$1,299</div>
+            <ul class="model-specs">
+              <li>14″ 4K OLED Touch</li>
+              <li>Intel Core Ultra 7</li>
+              <li>16GB RAM · 512GB SSD</li>
+              <li>22hr Battery</li>
+            </ul>
+            <button class="btn-outline model-cta" data-name="Essential 14&quot;">Select</button>
+          </div>
+          <div class="model-card featured" data-model="pro">
+            <div class="model-badge">Pro</div>
+            <div class="model-tag">Most Popular</div>
+            <div class="model-price">$1,799</div>
+            <ul class="model-specs">
+              <li>14″ 4K OLED Touch</li>
+              <li>Intel Core Ultra 9</li>
+              <li>32GB RAM · 1TB SSD</li>
+              <li>28hr Battery</li>
+            </ul>
+            <button class="btn-primary model-cta" data-name="Pro 14&quot;">Select</button>
+          </div>
+          <div class="model-card" data-model="ultra">
+            <div class="model-badge">Ultra</div>
+            <div class="model-price">$2,499</div>
+            <ul class="model-specs">
+              <li>16″ 4K OLED Touch</li>
+              <li>Intel Core Ultra 9 HX</li>
+              <li>64GB RAM · 2TB SSD</li>
+              <li>32hr Battery</li>
+            </ul>
+            <button class="btn-outline model-cta" data-name="Ultra 16&quot;">Select</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      <span id="toastMsg">Added to cart</span>
+    </div>
+
+    <div class="cart-panel" id="cartPanel">
+      <div class="cart-overlay" id="cartOverlay"></div>
+      <div class="cart-drawer">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <button class="close-btn" id="closeCart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <div class="cart-empty">Your cart is empty.</div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none">
+          <div class="cart-total">
+            <span>Total</span>
+            <span id="cartTotal">$0</span>
+          </div>
+          <button class="btn-primary full-width">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

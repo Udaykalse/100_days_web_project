@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Chat UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chat-app">
+      <header class="chat-header">
+        <div class="user-info">
+          <img
+            src="https://randomuser.me/api/portraits/women/17.jpg"
+            alt="Sarah"
+          />
+          <div>
+            <h2>Sarah</h2>
+            <span class="status">Online</span>
+          </div>
+        </div>
+
+        <button id="themeToggle">🌙</button>
+      </header>
+
+      <div class="chat-body" id="chatBody">
+        <ul class="chat-list" id="chatList"></ul>
+
+        <div class="typing" id="typing">
+          Sarah is typing
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <form class="chat-input-container" id="chatForm">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type a message..."
+          autocomplete="off"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

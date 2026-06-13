@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>NovaTooltip | Modern Interactive Tooltips</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="app-container">
+        <header class="hero">
+            <h1>✨ NovaTooltip</h1>
+            <p>Smart, animated tooltips • Hover or focus • Fully responsive</p>
+            <div class="badge-group">
+                <span class="badge">CSS only fallback</span>
+                <span class="badge">JavaScript enhanced</span>
+                <span class="badge">WCAG friendly</span>
+            </div>
+        </header>
+
+        <div class="demo-grid">
+            <div class="tooltip-card" data-tooltip="Top tooltip — appears above with smooth scale" data-position="top">
+                <button class="tooltip-trigger top-trigger" aria-describedby="tt-top">
+                    ↑ Top Tooltip
+                    <span class="visually-hidden">(hover or focus for tooltip)</span>
+                </button>
+            </div>
+
+            <div class="tooltip-card" data-tooltip="Right tooltip — slides from the side with accent shadow" data-position="right">
+                <button class="tooltip-trigger right-trigger" aria-describedby="tt-right">
+                    → Right Tooltip
+                </button>
+            </div>
+
+            <div class="tooltip-card" data-tooltip="Bottom tooltip — smooth upward entrance" data-position="bottom">
+                <button class="tooltip-trigger bottom-trigger" aria-describedby="tt-bottom">
+                    ↓ Bottom Tooltip
+                </button>
+            </div>
+
+            <div class="tooltip-card" data-tooltip="Left tooltip — perfect for side navigation patterns" data-position="left">
+                <button class="tooltip-trigger left-trigger" aria-describedby="tt-left">
+                    ← Left Tooltip
+                </button>
+            </div>
+        </div>
+
+        <div class="interactive-panel">
+            <div class="panel-header">
+                <h2>🎮 Interactive playground</h2>
+                <span class="live-badge">live preview</span>
+            </div>
+            <div class="custom-tooltip-demo">
+                <div class="dynamic-area" id="dynamicArea">
+                    <button class="dynamic-btn" id="dynamicBtn" data-custom-tooltip="you can edit me! ✨">
+                        Hover or focus me
+                    </button>
+                </div>
+                <div class="controls">
+                    <div class="input-group">
+                        <label for="tooltipText">Custom tooltip text</label>
+                        <input type="text" id="tooltipText" placeholder="e.g., Amazing feature!" value="you can edit me! ✨">
+                    </div>
+                    <div class="input-group">
+                        <label for="positionSelect">Position</label>
+                        <select id="positionSelect">
+                            <option value="top">Top</option>
+                            <option value="right">Right</option>
+                            <option value="bottom" selected>Bottom</option>
+                            <option value="left">Left</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="delayRange">Show delay (ms)</label>
+                        <input type="range" id="delayRange" min="0" max="400" value="80" step="10">
+                        <span id="delayValue" class="range-value">80ms</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Smart positioning</h3>
+                <p>Auto edge detection + micro offsets</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Glass morphism</h3>
+                <p>Blur background + modern gradient</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">♿</div>
+                <h3>Accessible</h3>
+                <p>Keyboard focus + ARIA labels</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>NovaTooltip — modern tooltip system | Hover, focus or click to experience</p>
+        </footer>
+    </main>
+
+    <div id="liveTooltip" class="modern-tooltip" role="tooltip" aria-hidden="true"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

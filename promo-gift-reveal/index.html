@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unwrap Your Promo Code</title>
+    <meta
+      name="description"
+      content="Click or tap the gift box to unwrap a discount code."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="scene">
+      <div
+        class="gift"
+        id="gift"
+        role="button"
+        tabindex="0"
+        aria-pressed="false"
+        aria-label="Open the gift to reveal your promo code"
+        data-code="ILOVEYOU"
+        data-discount="20% off your order"
+        data-expiry-hours="24"
+      >
+        <div class="lid" id="lid">
+          <span class="lid__ribbon"></span>
+          <span class="bow"><span class="bow__knot"></span></span>
+        </div>
+
+        <div class="reveal" id="reveal">
+          <p class="reveal__label">Your code</p>
+          <p class="reveal__code" id="revealCode"></p>
+          <p class="reveal__discount" id="revealDiscount"></p>
+          <button class="copy-btn" id="copyBtn" type="button" tabindex="-1">
+            Copy code
+          </button>
+          <p class="reveal__expiry" id="expiry"></p>
+        </div>
+
+        <div class="box">
+          <span class="box__ribbon"></span>
+        </div>
+      </div>
+
+      <p class="hint" id="hint">Tap or click the gift to open it</p>
+      <p class="sr-only" id="announce" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
